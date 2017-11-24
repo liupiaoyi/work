@@ -1,2 +1,3 @@
 # work
 homework
+firday
