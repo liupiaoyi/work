@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<context:annotation-config />
+
+<!-- Integer id, String name, List list, Set set, Map mapList, Properties pros -->
+	<bean id="personFeilds" class="com.test.Person">
+		<property name="id" value="1" />
+		<property name="name" value="jack" />
+		
+		<property name="list">
+			<list>
+				<value>a list element followed by a reference</value>
+			</list>
+		</property>
+		
+		<property name="set">
+			<set>
+				<value>just some string</value>
+			</set>
+		</property>
+		
+		<property name="mapList">
+			<map>
+				<entry key = "an entry" value="just some string"/>
+			</map>
+		</property>
+		
+		<property name="pros">
+			<props key="administrator" >administrator</props>
+			<props key="support" >support</props>
+			<props key="development" >development</props>
+		</property>
+		
+	</bean>
+
+</beans>
